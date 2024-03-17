@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Главная</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-wrapper">
+                <div class="header-wrapper__logo"><img src="{% static 'img/LOGO.png' %}" alt="" /></div>
+                <div class="header-wrapper__menu">
+                    <ul>
+                        <li> <a href="{% url 'home' %}">Главная</a></li>
+                        {% if user.is_authenticated %}
+                            <li> <a href="{% url 'account_logout' %}">Выход</a></li>
+                        {% else %}
+                            <li> <a href="{% url 'account_login' %}">Вход</a></li>
+                            <li> <a href="{% url 'account_signup' %}">Регистрация</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="burger"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22"
+                        fill="none">
+                        <path d="M2 2H32" stroke="white" stroke-width="3" stroke-linecap="round" />
+                        <path d="M2 11H32" stroke="white" stroke-width="3" stroke-linecap="round" />
+                        <path d="M2 20H32" stroke="white" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    <div class="burger-menu"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="128"
+                            viewBox="0 0 239 128" fill="none">
+                            <rect y="20" width="239" height="108" rx="10" fill="white" />
+                            <path d="M204.625 0L216.5 20H194L204.625 0Z" fill="white" />
+                        </svg>
+                        <ul>
+                            <li> <a href="{% url 'home' %}">Главная</a></li>
+                            <li> <a href="{% url 'home' %}">Достопримечательности</a></li>
+                            <li> <a href="{% url 'home' %}">История</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper__logo"><img src="{% static 'img/LOGO.png' %}" alt="" /></div>
+                <div class="footer-wrapper__social-networks">
+                    <p>Мы в социальных сетях</p>
+                    <div class="footer-wrapper__social-networks-items"><img src="{% static 'img/icon_telegram.png' %}" alt="#" /><img
+                            src="{% static 'img/icon_vk.png' %}" alt="#" /><img src="{% static 'img/icon_instagram.png' %}" alt="#" /></div>
+                </div>
+                <div class="footer-wrapper__contacts">
+                    <div class="footer-wrapper__contact"><img src="{% static 'img/local_phone_icon 1.png' %}" alt="" />
+                        <p>+7 (496) 417-41-80</p>
+                    </div>
+                    <div class="footer-wrapper__contact"><img src="{% static 'img/mail_email_icon 1.png' %}" alt="" />
+                        <p class="footer-wrapper__contact_text1">spdavidovo@rambler.ru</p>
+                    </div>
+                    <div class="footer-wrapper__contact"><img src="{% static 'img/location_map_marker_icon 1.png' %}" alt="" />
+                        <p>31, 2-й микрорайон, д. Давыдово</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            <script src="./js/menu_burger.js"> </script>
+        -->
+    </footer>
+</body>
+
+</html>

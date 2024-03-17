@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container">
+  <div class="events">
+    <div class="events__wrapper">
+      <div class="events__photo">
+        <img src="{{post.photo_url}}" alt="">
+      </div>
+      <div class="events__info">
+        <p class="events__data">{{post.date}}</p>
+        <p class="events__title">{{post.name}}</p>
+        <p class="events__comm">Комментарии</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

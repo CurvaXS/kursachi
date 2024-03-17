@@ -1,0 +1,70 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="frame">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.6236699474534!2d38.95910642170059!3d55.70520100515576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414afd435c55ba71%3A0x4fd5f4b1e1a33a1e!2z0JzQo9CaINCa0JTQpiDCq9CU0YPQu9C10LLRgdC60LjQucK7!5e0!3m2!1sru!2sru!4v1702057244333!5m2!1sru!2sru"
+      width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<div class="container">
+  <div class="graphic-element">
+    <div class="graphic-element__left"></div><img src="{% static 'img/prod_grapgic_element.png' %}" alt="">
+    <div class="graphic-element__right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="search">
+    <div class="search__form">
+      <img src="{% static 'img/lupa.png' %}" alt="">
+      <input type="text" placeholder="Найти событие">
+    </div>
+  </div>
+</div>
+
+{% if note %}
+{% for el in note %}
+<div class="container">
+  <div class="events">
+    <div class="events__wrapper">
+      <div class="events__photo">
+        <img src="{{el.photo_url}}" alt="">
+      </div>
+      <div class="events__info">
+        <p class="events__data">{{el.date}}</p>
+        <p class="events__title"> <a href="{{el.get_absolute_url}}">{{el.name}}</a></p>
+        <p class="events__comm">Комментарии</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% else %}
+<div class="container">
+  <p class="not_found_notes">Нет записей</p>
+</div>
+{% endif %}
+
+
+<div class="container">
+  <div class="graphic-element">
+    <div class="graphic-element__left"></div><img src="{% static 'img/prod_grapgic_element.png' %}" alt="">
+    <div class="graphic-element__right"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="reference-information">
+    <p>Давыдово в советское время Давыдово. Мемориал памяти жертв политических репрессий Несмотря на распространенную
+      точку зрения, что в деревне Давыдово располагались 2 моленные: летняя и зимняя, на самом деле их было 3.
+      Небольшая моленная стояла позади «попова дома» (ранее в нём жил Владыка Даниил, затем — священник Димитрий
+      Абрамов, после его ареста в доме располагалась школа, ныне — обычный жилой дом). Первоначально данная моленная
+      использоваться только для келейной молитвы Владыки Даниила и его ближайшего окружения. Решением № 244 от 5
+      февраля 1941 года Исполком Мособлсовета закрыл, «учитывая ходатайство населения», уже третий по счёту
+      молитвенный дом в селе Давыдово. При этом первая (зимняя) была закрыта согласно постановлению Мособлисполкома от
+      26 января 1930 году, а вторая (летняя) постановлением от 29 июня 1938 года была переоборудована под</p>
+  </div>
+</div>
+{% endblock %}

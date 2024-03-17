@@ -1,0 +1,313 @@
+@charset "UTF-8";
+@import url(https://fonts.google.com/specimen/Cormorant+Garamond);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+
+.header {
+  height: 150px;
+}
+.header .header-wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-wrapper .header-wrapper__logo {
+  margin: 0;
+  width: 138.15px;
+}
+.header .header-wrapper .header-wrapper__logo img {
+  width: 138.15px;
+  height: 138.15px;
+  margin-left: 24.48px;
+}
+.header .header-wrapper .header-wrapper__menu {
+  margin-left: 80px;
+}
+.header .header-wrapper .header-wrapper__menu ul {
+  display: flex;
+}
+.header .header-wrapper .header-wrapper__menu li {
+  display: flex;
+  list-style-type: none;
+  margin-top: 70px;
+}
+.header .header-wrapper .header-wrapper__menu li a {
+  color: black;
+  font-family: Cormorant Garamond;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  margin-right: 50px;
+}
+.header .header-wrapper .header-wrapper__menu li:nth-child(2) {
+  margin-left: 20px;
+}
+.header .header-wrapper .header-wrapper__menu li:nth-child(3) {
+  margin-left: 20px;
+}
+.header .burger {
+  display: none;
+}
+
+/*КОНТЕНТ*/
+.container {
+  margin: 0 auto;
+}
+.container iframe {
+  width: 1200px;
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+.container {
+  width: 1000px;
+}
+.container .graphic-element {
+  width: 100%;
+  margin-top: 88px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .graphic-element .graphic-element__left,
+.container .graphic-element .graphic-element__right {
+  width: 650px;
+  height: 1px;
+  background: #000;
+  margin: auto 0;
+}
+.container .graphic-element img {
+  width: 173.45px;
+  height: 184.4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .search {
+  margin-top: 30px;
+}
+.container .search .search__form {
+  display: flex;
+  align-items: center;
+}
+.container .search .search__form input {
+  border: none;
+  height: 60px;
+  font-size: 36px;
+}
+.container .not_found_notes {
+  font-size: 45px;
+  text-align: center;
+}
+.container .events {
+  width: 100%;
+  margin: 40px 0;
+}
+.container .events .events__wrapper {
+  width: 100%;
+  height: 470px;
+  display: flex;
+}
+.container .events .events__wrapper .events__photo {
+  margin-left: 0;
+  margin-right: 20px;
+}
+.container .events .events__wrapper .events__photo img {
+  width: 513px;
+}
+.container .events .events__info {
+  text-align: left;
+  font-weight: 400;
+}
+.container .events .events__info .events__data {
+  font-size: 36px;
+  color: rgb(116, 116, 116);
+}
+.container .events .events__info .events__title {
+  font-size: 45px;
+}
+.container .events .events__info .events__comm {
+  font-size: 36px;
+  color: rgb(116, 116, 116);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .reference-information {
+  margin-top: 47px;
+  margin-bottom: 100px;
+}
+.container .reference-information p {
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .indicators {
+  width: 1200px;
+  margin-top: 100px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .history {
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+.container .history p {
+  color: #000;
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  padding-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .attractions {
+  margin-top: 74px;
+  margin-bottom: 111px;
+}
+.container .attractions .attractions__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+}
+.container .attractions .attractions__block img {
+  width: 400px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+.container .enterprises {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.container .enterprises p {
+  color: #000;
+  font-family: Cormorant Garamond;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+.container .enterprises li {
+  margin-left: 30px;
+  color: #000;
+  font-family: Cormorant Garamond;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+/*ПОДВАЛ*/
+.footer {
+  height: 300px;
+  display: flex;
+}
+.footer .footer-wrapper {
+  font-family: Cormorant Garamond;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 28px;
+  justify-content: space-between;
+  position: relative;
+}
+.footer .footer-wrapper .footer-wrapper__logo {
+  display: flex;
+  height: 121px;
+  margin-right: 60px;
+}
+.footer .footer-wrapper .footer-wrapper__logo img {
+  width: 120px;
+  height: 120px;
+}
+.footer .footer-wrapper .footer-wrapper__social-networks {
+  margin-right: 40px;
+}
+.footer .footer-wrapper .footer-wrapper__social-networks p {
+  color: black;
+  font-family: Anonymous Pro;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer .footer-wrapper .footer-wrapper__social-networks .footer-wrapper__social-networks-items {
+  margin-top: 44px;
+}
+.footer .footer-wrapper .footer-wrapper__social-networks .footer-wrapper__social-networks-items img {
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+}
+.footer .footer-wrapper .footer-wrapper__contacts {
+  color: black;
+  font-family: Cormorant Garamond;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 500px;
+  margin-left: 60px;
+}
+.footer .footer-wrapper .footer-wrapper__contacts .footer-wrapper__contact {
+  display: flex;
+  margin-bottom: 42px;
+}
+.footer .footer-wrapper .footer-wrapper__contacts .footer-wrapper__contact p {
+  margin: auto 0;
+  margin-left: 28px;
+  width: 511px;
+  font-size: 25px;
+}
+.footer .footer-wrapper .footer-wrapper__contacts .footer-wrapper__contact p.footer-wrapper__contact_text1 {
+  margin: auto 0;
+  margin-left: 28px;
+  width: 511px;
+  text-decoration: underline;
+}
+.footer .footer-wrapper .footer-wrapper__contacts .footer-wrapper__contact img {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */
