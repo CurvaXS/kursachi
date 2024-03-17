@@ -1,12 +1,14 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+from django.contrib.auth.models import User
+
 
 class Note(models.Model):
     photo = models.ImageField(upload_to="photos", default=None, blank=True, null=True, verbose_name="Фото")
     date = models.DateField(default=timezone.now)
     name = models.CharField('Наименование записи', max_length = 200)
-    #slug = models.SlugField(max_length=250, unique=True , default='',)
+    url = models.SlugField(max_length=250, unique=True)
     
     class Meta:
         verbose_name = 'запись'
@@ -28,17 +30,13 @@ class Note(models.Model):
 
 class Comment(models.Model):
     note = models.ForeignKey(Note, related_name='comments', on_delete = models.PROTECT)
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
+    name = models.ForeignKey(User, on_delete = models.PROTECT)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-    active = models.BooleanField(default=True)
-    #slug = models.SlugField(max_length=200, db_index=True)
 
     class Meta:
         ordering = ('created',)
         
 
     def __str__(self):
-        return 'Comment by {} on {}'.format(self.name, self.post)
+        return 'Comment by {} on {}'.format(self.name, self.note)

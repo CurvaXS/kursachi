@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container">
+  <div class="events">
+    <div class="events__wrapper">
+      <div class="events__photo">
+        <img src="{{note.photo_url}}" alt="">
+      </div>
+      <div class="events__info">
+        <p class="events__data">{{note.date}}</p>
+        <p class="events__title">{{note.name}}</p>
+        <p class="events__comm">Комментарии</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if comm %}
+  {% for e in comm %}
+    <div>
+      <p>{{ e.created }}</p>
+      {% for us in comm.note.all %}
+        <p>{{ us.name }}</p>
+      {% endfor %}
+      <p>{{ e.body }}</p>
+    </div>
+  {% endfor %}
+{% else %}
+<p>ничего Нет</p>
+{% endif %}
+{% endblock %}

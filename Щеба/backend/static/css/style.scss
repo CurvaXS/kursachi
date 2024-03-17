@@ -10,9 +10,11 @@
 
 .header {
     height: 150px;
+    
 
 
     .header-wrapper {
+        margin: 0 auto;
         width: 1200px;
         display: flex;
         justify-content: space-between;
