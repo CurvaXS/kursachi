@@ -38,5 +38,5 @@ class Comment(models.Model):
         return f"{self.name} - {self.note}"
     
     class Meta:
-        verbose_name = 'отзыв'
-        verbose_name_plural = 'Отзывы'
+        verbose_name = 'комментарий'
+        verbose_name_plural = 'Комментарии'

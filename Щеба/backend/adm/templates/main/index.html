@@ -35,7 +35,7 @@
       </div>
       <div class="events__info">
         <p class="events__data">{{el.date}}</p>
-        <p class="events__title"> <a href="{% url 'post_detail' el.url %}">{{el.name}}</a></p>
+        <p class="events__title"> <a href="{% url 'post_detail' el.id %}">{{el.name}}</a></p>
         <p class="events__comm">Комментарии</p>
       </div>
     </div>

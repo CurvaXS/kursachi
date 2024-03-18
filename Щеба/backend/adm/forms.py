@@ -8,7 +8,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body', )
         widgets = {
-            "name": forms.Textarea(attrs={
+            "body": forms.Textarea(attrs={
                 'class': 'comment',
                 'placeholder': 'Введите'
             }),
