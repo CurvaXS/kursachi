@@ -33,10 +33,10 @@ class Comment(models.Model):
     name = models.ForeignKey(User, on_delete = models.PROTECT)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ('created',)
         
-
     def __str__(self):
-        return 'Comment by {} on {}'.format(self.name, self.note)
+        return f"{self.name} - {self.note}"
+    
+    class Meta:
+        verbose_name = 'отзыв'
+        verbose_name_plural = 'Отзывы'

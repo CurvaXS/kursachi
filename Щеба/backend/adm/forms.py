@@ -1,4 +1,4 @@
-from django.db import forms
+from django import forms
 
 from .models import Comment
 
@@ -6,4 +6,10 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('name', 'email', 'body')
+        fields = ('body', )
+        widgets = {
+            "name": forms.Textarea(attrs={
+                'class': 'comment',
+                'placeholder': 'Введите'
+            }),
+        }
