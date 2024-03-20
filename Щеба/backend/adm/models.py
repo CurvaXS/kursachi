@@ -13,11 +13,7 @@ class Note(models.Model):
     class Meta:
         verbose_name = 'запись'
         verbose_name_plural = 'Записи'
-        #index_together = (('id', 'slug'),)
-    """
-    def get_absolute_url(self):
-        return reverse('adm:post_detail', args=[self.id, self.slug])
-    """
+
 
     @property
     def photo_url(self):

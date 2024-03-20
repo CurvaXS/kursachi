@@ -16,12 +16,13 @@ def home(request):
 def post_detail(request, pk):
     note = get_object_or_404(Note, id=pk)
     comment = Comment.objects.filter(note=pk)
+    current_user = request.user
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            form.user = request.user
-            form.note.id = note.id
+            form.user = current_user
+            form.name_id = note.id
             form.save()
     else:
         form = CommentForm()
