@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<section class="catalog">
+    <div class="wrapper" id="products">
+
+      <div class="filters">
+        <p>Поиск</p>
+        <input class="search" placeholder="Search">
+        <span class="sort" data-sort="name">Сортировать по имени</span>
+        <span class="sort" data-sort="sort_s">Сортировать по изделию</span>
+      </div>
+      
+      
+      <h1>Каталог</h1>
+      <div class="catalog-line list">
+        {% if prod %}
+          {% for el in prod %}
+          <div class="catalog-line__block">
+            <a href="">
+              <img src="{{ el.photo_url }}" alt="meat">
+            </a>
+            <p class="name">{{ el.name }}</p>
+            <p class="sort_s">{{ el.sort }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <h1>Каталог</h1>
+      {% endif %}
+
+
+      </div>
+  </section>
+  <script src="{% static 'js/list.min.js' %}"></script>
+  <script>
+    var options = {
+      valueNames: [ 'name', 'sort_s' ]
+    };
+    
+    var userList = new List('products', options);
+  </script>
+  
+{% endblock %}

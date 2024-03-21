@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <header> 
+        <div class="wrapper"> 
+          <div class="header"> <img class="logo" src="{% static 'images/logo.png' %}" alt="logo"/>
+            <ul class="main-menu"> 
+              <li> <a href="{% url 'home' %}">О нас </a></li>
+              <li> <a href="{% url 'catalog' %}">Каталог </a></li>
+              {% if user.is_authenticated %}
+                <li> <a href="{% url 'account_logout' %}">Выход</a></li>
+              {% else %}
+                <li> <a href="{% url 'account_login' %}">Войти / Зарегестрироваться</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </header>
+
+    {% block content %}{% endblock %}
+
+    
+<footer> 
+    <div class="wrapper">
+      <div class="footer-block"><img class="logo-footer" src="{% static 'images/logo.png' %}" alt=""/>
+        <p>Фирма АгроМяс. 2023<br>© Все права защищены</p>
+      </div>
+      <div class="footer-block"> 
+        <p id="number">8(977)-585-33-20</p>
+        <p>061452, Костромская область, город Балашиха, въезд Домодедовская, 16</p>
+        <p id="email">AgroMyas@mail.ru</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

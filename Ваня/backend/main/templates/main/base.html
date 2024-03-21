@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Главная</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-wrapper">
+      <div class="header-wrapper__logo"><img src=" {% static 'img/image 1.svg' %}" alt=""/></div>
+      <div class="header-wrapper__main-menu">
+        <ul>
+          <li> <a href="{% url 'home' %}">На главную </a></li>
+          <li> <a href="{% url 'catalog' %}">Каталог</a></li>
+          {% if user.is_authenticated %}
+            <li> <a href="{% url 'account_logout' %}">Выход</a></li>
+          {% else %}
+            <li> <a href="{% url 'account_login' %}">Войти</a></li>
+            <li> <a href="{% url 'account_signup' %}">Зарегестрироваться</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="header-wrapper__banner"></div>
+  </header>
+
+    {% block content %}{% endblock %}
+
+    
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-wraper__contact">
+          <h3>Контакты <br><br></h3>
+          <p>Любой товар с данного сайта может быть доставлен в ваш регион. Самовывоз со склада возможен только в г. Ярославль.<br><br></p><span>+7 (800) 302-93-50 <br> +7 (910) 970-05-00</span>
+        </div>
+        <div class="footer-wraper__dop">
+          <p>Дополнительно</p>
+          <ul> 
+            <li>Товары со скидкой</li>
+            <li>Возврат товаров</li>
+            <li>О компании</li>
+            <li>Политика конфиденциальности</li>
+          </ul>
+        </div>
+        <div class="footer-wraper__info">
+          <p>Информация</p>
+          <ul> 
+            <li>Каталог товаров </li>
+            <li>Доставка и оплата </li>
+            <li>Как сделать заказ?</li>
+          </ul>
+        </div>
+        <div class="footer-wraper__personal">
+          <p>Личный Кабинет    </p>
+          <ul> 
+            <li>Личный Кабинет</li>
+            <li>История заказов</li>
+            <li>Мои закладки</li>
+            <li>Рассылка новостей</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,994 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Inter;
+}
+
+header{
+    .header-wrapper{
+        max-width: 1613px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-wrapper__main-menu{
+            max-width: 1114px;
+            ul{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                list-style-type: none;
+                margin-right: 190px;
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 242px;
+                    height: 98px;
+                    border-radius: 50px;
+                    border: 1px solid #000;
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            li:nth-child(3){
+                margin-right: 0;
+            }
+        }
+        }
+    }
+    .header-wrapper__banner{
+        width: 100%;
+        height: 1064px;
+        background-image: url('../img/bg_chease.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+//Главная страница
+.main{
+    max-width: 1440px;
+    h1.sec__name{
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        padding: 67px 0 38px;
+    }
+    h1.sec__name-left{
+        text-align: left;
+    }
+    p.sec__block{
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 55px;
+    }
+    p.sec__block-dop{
+        margin-bottom: 130px;
+    } 
+    hr.line{
+        margin: 0;   
+    }
+
+    .sec__delivery{
+        margin: 55px 0 93px;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .delivry__eclipse{
+        width: 277px;
+        height: 337px;
+        border-radius: 337px;
+        background: #F9B97D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 32px;
+        color: #FFF;
+    }
+    .delivery__text{
+        max-width: 1120px;
+    }
+    .sec__comments{
+        margin: 114px 0 199px;
+        .comment__item{
+            display: flex;
+            align-items: center;
+            margin: 65px auto;
+            p.buyer-name{
+                font-size: 24px;
+                padding-right: 3px;
+            }
+            .comnt{
+                width: 75%;
+                border-radius: 30px;
+                border: 1px solid #000;
+                font-size: 20px;
+                p{
+                    padding: 3px 0  3px 22px;
+                }
+            }
+            .rating{
+                max-height: 36px;
+            }
+        }
+    }
+    .sec__news{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 200px;
+        .news__item{
+            max-width: 460px;
+            font-size: 24px;
+            p.news__name{
+                padding-top: 26px;
+                color: #FF4D01;
+            }
+            p.news__descr{
+                padding-bottom: 12px;
+            }
+            button{
+                width: 202px;
+                height: 49px;
+                border-radius: 12px;
+                background: #FFC692;
+                border: none;
+                cursor: pointer;
+                float: right;
+                margin-right: 20px;
+            }
+            button:active{
+                background: #d89c65;
+            }
+            button:hover{
+                transform: scale(0.965);
+                transition: all 0.12s;
+            }
+        }
+    }
+}
+
+
+//Каталог 
+.main{
+    .sec__catalog{
+        margin: 211px 0 119px;
+        display: flex;
+        flex-wrap: wrap;
+        .catalog__prod{
+            max-width: 428px;
+            font-size: 32px;
+            .prod-descr{
+                display: flex;
+                flex-wrap: wrap;
+                height: 250px;
+                p.prod__name{
+                    text-decoration: underline;
+                }
+                p.prod_price{
+                    text-align: left;
+                }
+            }
+           
+        }
+    }
+    .sec_blogs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        img{
+            margin-bottom: 39px;
+        }
+    }
+    
+}
+
+
+//Новости
+.bg{
+    width: 100%;
+    height: 210vh;
+    background-color: #FFE4CC;
+    .main{
+        .sec__news-tablets{
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            .news__tablet{
+                width: 100%;
+                border: 1px solid #000;
+                background: #FFF;
+                margin-bottom: 59px;
+                p.tablet__name{
+                    font-size: 36px;
+                    padding: 15px 20px 40px;
+                }
+                .tablet__block{
+                    display: flex;
+                    justify-content: space-between;
+                    img{
+                        padding-bottom: 37px;
+                    }
+                    .block__text{
+                        position: relative;
+                        font-size: 24px;
+                        max-width: 607px;
+                        button{
+                            position: absolute;
+                            right: 87px;
+                            bottom: 65px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            width: 227px;
+                            height: 36px;
+                            border-radius: 20px;
+                            background: #FFC794;
+                            cursor: pointer;
+                            border: none;
+                        }
+                        button:active{
+                            background: #d89c65;
+                        }
+                        button:hover{
+                            transform: scale(0.965);
+                            transition: all 0.12s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Работа
+.main{
+    .sec__vacancy{
+        margin: 87px 0 170px;
+        width: 100%;
+        .vacancy__block{
+            position: relative;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 27px;
+            margin-bottom: 59px;
+            p.nameing{
+                padding: 5px 0 30px;
+                font-size: 48px;
+                color: #FC8F41;
+            }
+            p.salary{
+                font-size: 32px;
+                padding-bottom: 10px;
+            }
+            p.description{
+                font-size: 36px;
+                padding-bottom: 120px;
+            }
+            .btns{
+                position: absolute;
+                left: 25px;
+                bottom: 40px;
+                margin-bottom: 35px;
+                .echo{
+                    width: 403px;
+                    height: 72px;
+                    border-radius: 10px;
+                    border: 1px solid #000;
+                    background: #FFC794;
+                    font-size: 32px;
+                    cursor: pointer;
+                    margin-right: 73px;
+                }
+                .contact{
+                    width: 403px;
+                    height: 72px;
+                    border-radius: 10px;
+                    border: 1px solid #000;
+                    font-size: 32px;
+                    background: #FFF;
+                    cursor: pointer;
+                }
+                button:active{
+                    background: #d89c65;
+                }
+                .contact:active{
+                    background: #d3d3d3;
+                }
+                button:hover{
+                    transform: scale(0.965);
+                    transition: all 0.12s;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    background: #FFC692;
+    display: flex;
+    height: 319px;
+    align-items: center;
+    .footer-wrapper{
+        width: 1785px;
+        display: flex;
+        justify-content: space-between;
+        .footer-wraper__contact{
+            width: 35%;
+        }
+        ul{
+            padding-left: 28px;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width:1024px) {
+    header{
+        .header-wrapper{
+            max-width: 950px;
+            .header-wrapper__logo{
+                img{
+                    width: 151px;
+                    height: 137px;
+                }
+            }
+            .header-wrapper__main-menu{
+                max-width: 750px;
+                ul{
+                    li{
+                        margin-right: 85px;
+                        a{
+                            width: 153px;
+                            height: 62px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .header-wrapper__banner{
+            height: 568px;
+        }
+    }
+
+
+//Главная страница
+.main{
+    max-width: 950px;
+    h1.sec__name{
+        font-size: 24px;
+        padding: 50px 0 25px;
+    }
+    p.sec__block{
+        font-size: 16px;
+        margin-bottom: 55px;
+    }
+    .sec__delivery{
+        margin: 55px 0 67px;
+        font-size: 16px;
+    }
+    .delivry__eclipse{
+        width: 207px;
+        height: 207px;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+    .delivery__text{
+        max-width: 722px;
+    }
+    .sec__comments{
+        margin: 114px 0 199px;
+        .comment__item{
+            margin: 65px auto;
+            p.buyer-name{
+                font-size: 16px;
+                padding-right: 3px;
+            }
+            .comnt{
+                font-size: 12px;
+                p{
+                    padding: 3px 0  3px 12px;
+                }
+            }
+            .rating{
+                max-height: 36px;
+            }
+        }
+    }
+    .sec__news{
+        .news__item{
+            max-width: 258px;
+            font-size: 14px;
+            img{
+                width: 204px;
+                height: 123px;
+            }
+            p.news__name{
+                padding-top: 18px;
+            }
+
+            button{
+                width: 177px;
+                height: 32px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+//Каталог 
+.main{
+    .sec__catalog{
+        .catalog__prod{
+            img{
+                width: 242px;
+                height: 237px;
+            }
+            max-width: 264px;
+            font-size: 20px;
+            .prod-descr{
+                height: 150px;
+            }
+           
+        }
+    }
+    .sec_blogs{
+        margin-bottom: 80px;
+        img{
+            margin-bottom: 29px;
+            width: 449px;
+            height: 229px;
+        }
+    }
+    
+}
+
+
+//Новости
+.bg{
+    width: 100%;
+    height: 240vh;
+    background-color: #FFE4CC;
+    .main{
+        .sec__news-tablets{
+            max-width: 650px;
+            .news__tablet{
+                p.tablet__name{
+                    font-size: 20px;
+                    padding: 15px 20px 40px;
+                }
+                .tablet__block{
+                    img{
+                        padding-bottom: 37px;
+                        width: 245px;
+                        height: 196px;
+                    }
+                    .block__text{
+                        font-size: 16px;
+                        max-width: 324px;
+                        button{
+                            right: 60px;
+                            bottom: 40px;
+                            font-size: 8px;
+                            width: 121px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Работа
+.main{
+    .sec__vacancy{
+        .vacancy__block{
+            padding: 27px;
+            margin-bottom: 59px;
+            p.nameing{
+                padding: 5px 0 30px;
+                font-size: 32px;
+            }
+            p.salary{
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+            p.description{
+                font-size: 24px;
+                padding-bottom: 120px;
+            }
+            .btns{
+                left: 25px;
+                bottom: 40px;
+                margin-bottom: 35px;
+                .echo{
+                    width: 215px;
+                    height: 47px;
+                    font-size: 20px;
+                    margin-right: 40px;
+                }
+                .contact{
+                    width: 215px;
+                    height: 47px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+    footer{
+    height: 225px;
+    .footer-wrapper{
+        h3, p, span, ul li{
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}
+}
+
+@media (max-width:768px) {
+    header{
+        .header-wrapper{
+            max-width: 700px;
+            .header-wrapper__logo{
+                img{
+                    width: 112px;
+                    height: 115px;
+                }
+            }
+            .header-wrapper__main-menu{
+                max-width: 520px;
+                ul{
+                    li{
+                        margin-right: 83px;
+                        a{
+                            width: 113px;
+                            height: 52px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .header-wrapper__banner{
+            height: 404px;
+        }
+    }
+
+
+//Главная страница
+.main{
+    max-width: 700px;
+    h1.sec__name{
+        font-size: 24px;
+    }
+    p.sec__block{
+        font-size: 13px;
+    }
+    .sec__delivery{
+        font-size: 14px;
+    }
+    .delivry__eclipse{
+        width: 155px;
+        height: 155px;
+        font-size: 15px;
+    }
+    .delivery__text{
+        max-width: 534px;
+    }
+    .sec__comments{
+        margin: 114px 0 199px;
+        .comment__item{
+            margin: 65px auto;
+            p.buyer-name{
+                font-size: 14px;
+                padding-right: 3px;
+            }
+            .comnt{
+                font-size: 10px;
+                p{
+                    padding: 3px 0  3px 8px;
+                }
+            }
+            .rating{
+                max-height: 30px;
+            }
+        }
+    }
+    .sec__news{
+        .news__item{
+            max-width: 191px;
+            font-size: 12px;
+            img{
+                width: 151px;
+                height: 103px;
+            }
+            p.news__name{
+                padding-top: 12px;
+            }
+
+            button{
+                width: 130px;
+                height: 27px;
+                margin-right: 20px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+
+//Каталог 
+.main{
+    .sec__catalog{
+        margin-top: 100px;
+        .catalog__prod{
+            img{
+                width: 177px;
+                height: 179px;
+            }
+            max-width: 193px;
+            font-size: 15px;
+            .prod-descr{
+                height: 126px;
+            }
+        }
+    }
+    .sec_blogs{
+        margin-bottom: 80px;
+        img{
+            margin-bottom: 17px;
+            width: 349px;
+            height: 170px;
+        }
+    }
+    
+}
+
+
+//Новости
+.bg{
+    width: 100%;
+    height: 240vh;
+    background-color: #FFE4CC;
+    .main{
+        .sec__news-tablets{
+            max-width: 650px;
+            .news__tablet{
+                p.tablet__name{
+                    font-size: 20px;
+                    padding: 15px 20px 40px;
+                }
+                .tablet__block{
+                    img{
+                        padding-bottom: 37px;
+                        width: 245px;
+                        height: 196px;
+                    }
+                    .block__text{
+                        font-size: 16px;
+                        max-width: 324px;
+                        button{
+                            right: 60px;
+                            bottom: 40px;
+                            font-size: 8px;
+                            width: 121px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Работа
+.main{
+    .sec__vacancy{
+        .vacancy__block{
+            padding: 27px;
+            margin-bottom: 20px;
+            p.nameing{
+                padding: 5px 0 30px;
+                font-size: 27px;
+            }
+            p.salary{
+                font-size: 15px;
+                padding-bottom: 10px;
+            }
+            p.description{
+                font-size: 16px;
+                padding-bottom: 60px;
+            }
+            .btns{
+                left: 25px;
+                bottom: 15px;
+                margin-bottom: 35px;
+                .echo{
+                    width: 162px;
+                    height: 32px;
+                    font-size: 15px;
+                    margin-right: 40px;
+                }
+                .contact{
+                    width: 162px;
+                    height: 32px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+    footer{
+    height: 141px;
+    .footer-wrapper{
+        h3, p, span, ul li{
+            font-size: 10px;
+            font-weight: 400;
+        }
+    }
+}
+}
+
+
+@media (max-width:480px) {
+    header{
+        .header-wrapper{
+            max-width: 460px;
+            .header-wrapper__logo{
+                img{
+                    width: 101px;
+                    height: 91px;
+                }
+            }
+            .header-wrapper__main-menu{
+                ul{
+                    li{
+                        margin-right: 39px;
+                        a{
+                            width: 79px;
+                            height: 52px;
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+        .header-wrapper__banner{
+            height: 301px;
+        }
+    }
+
+
+//Главная страница
+.main{
+    max-width: 450px;
+    h1.sec__name{
+        font-size: 16px;
+    }
+    p.sec__block{
+        font-size: 11px;
+    }
+    .sec__delivery{
+        font-size: 11px;
+    }
+    .delivry__eclipse{
+        width: 96px;
+        height: 96px;
+        font-size: 15px;
+    }
+    .delivery__text{
+        max-width: 334px;
+    }
+    .sec__comments{
+        margin: 30px 0 50px;
+        .comment__item{
+            margin: 45px auto;
+            p.buyer-name{
+                font-size: 12px;
+                padding-right: 3px;
+            }
+            .comnt{
+                font-size: 8px;
+                p{
+                    padding: 3px 0  3px 8px;
+                }
+            }
+            .rating{
+                max-height: 25px;
+            }
+        }
+    }
+    .sec__news{
+        .news__item{
+            max-width: 191px;
+            font-size: 12px;
+            img{
+                width: 151px;
+                height: 103px;
+            }
+            p.news__name{
+                padding-top: 12px;
+            }
+            button{
+                width: 130px;
+                height: 27px;
+                margin-right: 20px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+
+//Каталог 
+.main{
+    .sec__catalog{
+        margin-top: 100px;
+        .catalog__prod{
+            img{
+                width: 177px;
+                height: 179px;
+            }
+            max-width: 193px;
+            font-size: 15px;
+            .prod-descr{
+                height: 126px;
+            }
+        }
+    }
+    .sec_blogs{
+        margin-bottom: 80px;
+        img{
+            margin-bottom: 17px;
+            width: 349px;
+            height: 170px;
+        }
+    }
+    
+}
+
+
+//Новости
+.bg{
+    width: 100%;
+    height: 240vh;
+    background-color: #FFE4CC;
+    .main{
+        .sec__news-tablets{
+            max-width: 650px;
+            .news__tablet{
+                p.tablet__name{
+                    font-size: 20px;
+                    padding: 15px 20px 40px;
+                }
+                .tablet__block{
+                    img{
+                        padding-bottom: 37px;
+                        width: 245px;
+                        height: 196px;
+                    }
+                    .block__text{
+                        font-size: 16px;
+                        max-width: 324px;
+                        button{
+                            right: 60px;
+                            bottom: 40px;
+                            font-size: 8px;
+                            width: 121px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Работа
+.main{
+    .sec__vacancy{
+        .vacancy__block{
+            padding: 27px;
+            margin-bottom: 20px;
+            p.nameing{
+                padding: 5px 0 30px;
+                font-size: 27px;
+            }
+            p.salary{
+                font-size: 15px;
+                padding-bottom: 10px;
+            }
+            p.description{
+                font-size: 16px;
+                padding-bottom: 60px;
+            }
+            .btns{
+                left: 25px;
+                bottom: 15px;
+                margin-bottom: 35px;
+                .echo{
+                    width: 162px;
+                    height: 32px;
+                    font-size: 15px;
+                    margin-right: 40px;
+                }
+                .contact{
+                    width: 162px;
+                    height: 32px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+    footer{
+    height: 250px;
+    .footer-wrapper{
+        width: 400px;
+        flex-wrap: wrap;
+        h3, p, span, ul li{
+            font-size: 10px;
+            font-weight: 400;
+        }
+    }
+}
+}
+
+@media (max-width:320px){
+    header{
+        .header-wrapper{
+            max-width: 300px;
+            .header-wrapper__logo{
+                img{
+                    width: 63px;
+                    height: 51px;
+                }
+            }
+            .header-wrapper__main-menu{
+                ul{
+                    li{
+                        margin-right: 7px;
+                        a{
+                            width: 68px;
+                            height: 21px;
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        .header-wrapper__banner{
+            height: 301px;
+        }
+    }
+}
