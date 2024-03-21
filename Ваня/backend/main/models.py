@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+
 
 class Product(models.Model):
     photo = models.ImageField(
@@ -20,3 +23,13 @@ class Product(models.Model):
         
     def __str__(self):
         return self.name
+    
+
+class Comments(models.Model):
+    name = models.ForeignKey(User, on_delete = models.CASCADE)
+    text = models.TextField()
+    date = models.DateField(default=timezone.now)
+
+    class Meta:
+        verbose_name = 'комментарий'
+        verbose_name_plural = 'Комментарии'

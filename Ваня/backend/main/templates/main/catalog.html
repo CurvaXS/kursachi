@@ -1,23 +1,25 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
+<div class="header-wrapper__banner"></div>
 <section class="catalog">
-  <div class="main">
-    <div class="sec__catalog">
+  <div class="main" id="products">
 
-      <div class="filters">
-        <p>Поиск</p>
-        <input class="search" placeholder="Search">
-        <span class="sort" data-sort="name">Сортировать по имени</span>
-        <span class="sort" data-sort="sort_s">Сортировать по изделию</span>
-      </div>
+    <div class="filters">
+      <p>Найдите товар в поисковой строке!</p>
+      <input class="search" placeholder="Поиск">
+      <span class="sort" data-sort="prod__name">Сортировать по имени</span>
+      <span class="sort" data-sort="prod_price">Сортировать по цене</span>
+    </div>
 
+    <div class="sec__catalog list">
       {% if products %}
         {% for elem in products %}
-          <div class="catalog__prod"><img src="{{ elem.photo_url }}" alt="">
+          <div class="catalog__prod">
+            <img src="{{ elem.photo_url }}" alt="">
             <div class="prod-descr">
               <p class="prod__name">{{ elem.name }}<br><br></p>
-              <p class="prod_price">{{ elem.price }}</p>
+              <p class="prod_price">{{ elem.price }} руб.</p>
             </div>
           </div>
         {% endfor %}
@@ -35,7 +37,7 @@
 <script src="{% static 'js/list.min.js' %}"></script>
 <script>
   var options = {
-    valueNames: ['name', 'sort_s']
+    valueNames: ['prod__name', 'prod_price']
   };
 
   var userList = new List('products', options);

@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-
+<div class="header-wrapper__banner"></div>
 <div class="main">
   <h1 class="sec__name">История компании</h1>
   <p class="sec__block">История компании ”СырноеСчастье” начинается ещё в 2017 году, когда компания только зарождалась,
@@ -30,30 +30,26 @@
 
   <div class="sec__comments">
     <h1 class="sec__name">Комментарии от наших клиентов</h1>
-    <div class="comment__item">
-      <p class="buyer-name">Валентина:</p>
-      <div class="comnt">
-        <p>Спасибо за доставленный заказ! Всё быстро доставили,хорошо упакованно и все заказанные товары доставлены!
-          Заказываю не впервые и очень довольна,благодарю весь коллектив “Сырного Счастья”</p>
-      </div><img class="rating" src="{% static 'img/rating.png' %}" alt="">
-    </div>
-    <div class="comment__item">
-      <p class="buyer-name">Игорь:</p>
-      <div class="comnt">
-        <p>Покрыла головку сыра, буду наблюдать</p>
-      </div><img class="rating" src="{% static 'img/rating_3.png' %}" alt="">
-    </div>
-    <div class="comment__item">
-      <p class="buyer-name">Оксана:</p>
-      <div class="comnt">
-        <p>Отличные формы</p>
-      </div><img class="rating" src="{% static 'img/rating.png' %}" alt="">
-    </div>
+    <h2 class="sec__name" style="text-align: left;">Написать комментарий</h2>
+    <form method="post" class="sec__comments-form">
+      {% csrf_token %}
+      {{form.text}}
+      <button type="submit">Отправить</button>
+    </form>
+    {% if comment %}
+      {% for elem in comment %}
+        <div class="comment__item">
+          <p class="buyer-name">{{ elem.name }}</p> <br>
+          <div class="comnt">
+            <p>{{elem.text}}</p>
+          </div>
+          <img class="rating" src="{% static 'img/rating.png' %}" alt="">
+          <span> {{elem.date}}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+
   </div>
-
-
-
-
 
 
   <hr class="line">

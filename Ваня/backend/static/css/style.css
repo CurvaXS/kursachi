@@ -43,7 +43,8 @@ header .header-wrapper .header-wrapper__main-menu ul li a {
 header .header-wrapper .header-wrapper__main-menu ul li:nth-child(3) {
   margin-right: 0;
 }
-header .header-wrapper__banner {
+
+.header-wrapper__banner {
   width: 100%;
   height: 1064px;
   background-image: url("../img/bg_chease.png");
@@ -51,8 +52,129 @@ header .header-wrapper__banner {
   background-size: cover;
 }
 
+form[action="/accounts/signup/"],
+form[action="/accounts/login/"],
+form[action="/accounts/password/reset/"] {
+  max-width: 750px;
+  min-height: 600px;
+}
+form[action="/accounts/signup/"] h1,
+form[action="/accounts/login/"] h1,
+form[action="/accounts/password/reset/"] h1 {
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+form[action="/accounts/signup/"] p,
+form[action="/accounts/login/"] p,
+form[action="/accounts/password/reset/"] p {
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 48px;
+}
+form[action="/accounts/signup/"] p input,
+form[action="/accounts/login/"] p input,
+form[action="/accounts/password/reset/"] p input {
+  width: 100%;
+  height: 188px;
+  font-size: 40px;
+  background-color: #FFC794;
+  border-radius: 20px;
+  font-size: 48px;
+  padding-left: 15px;
+}
+form[action="/accounts/signup/"] p input[type=checkbox],
+form[action="/accounts/login/"] p input[type=checkbox],
+form[action="/accounts/password/reset/"] p input[type=checkbox] {
+  margin-left: 10px;
+  width: 30px;
+  height: 52px;
+}
+form[action="/accounts/signup/"] p label,
+form[action="/accounts/login/"] p label,
+form[action="/accounts/password/reset/"] p label {
+  font-size: 40px;
+  display: none;
+}
+form[action="/accounts/signup/"] p a,
+form[action="/accounts/login/"] p a,
+form[action="/accounts/password/reset/"] p a {
+  padding-left: 5px;
+  font-size: 40px;
+}
+form[action="/accounts/signup/"] ul,
+form[action="/accounts/login/"] ul,
+form[action="/accounts/password/reset/"] ul {
+  margin: 15px auto;
+  width: 100%;
+}
+form[action="/accounts/signup/"] ul li,
+form[action="/accounts/login/"] ul li,
+form[action="/accounts/password/reset/"] ul li {
+  list-style-type: none;
+  font-size: 22pt;
+}
+form[action="/accounts/signup/"] button,
+form[action="/accounts/login/"] button,
+form[action="/accounts/password/reset/"] button {
+  transition: all 0.1s;
+  width: 100%;
+  height: 118px;
+  border-radius: 24px;
+  border: none;
+  font-size: 60px;
+  margin: 30px 0;
+  background-color: #F98E2C;
+}
+form[action="/accounts/signup/"] button:active,
+form[action="/accounts/login/"] button:active,
+form[action="/accounts/password/reset/"] button:active {
+  transform: scale(0.9);
+}
+
+form[action="/accounts/login/"] p input[type=checkbox] {
+  margin-left: 1px;
+  width: 30px;
+  height: 52px;
+}
+form[action="/accounts/login/"] p label {
+  font-size: 40px;
+  display: block;
+}
+
 .main {
   max-width: 1440px;
+}
+.main .sec__comments-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+}
+.main .sec__comments-form textarea {
+  width: 75%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.main .sec__comments-form button {
+  width: 202px;
+  height: 49px;
+  border-radius: 12px;
+  background: #9dd865;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
+.main .sec__comments-form button:active {
+  background: #65d865;
+}
+.main .sec__comments-form button:hover {
+  transform: scale(0.965);
+  transition: all 0.12s;
 }
 .main h1.sec__name {
   font-size: 36px;
@@ -153,6 +275,33 @@ header .header-wrapper__banner {
   transition: all 0.12s;
 }
 
+.main .filters {
+  margin: 20px 10px;
+  font-size: 18px;
+}
+.main .filters p {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.main .filters input.search {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 18px;
+  padding-left: 5px;
+}
+.main .filters span.sort {
+  transition: all 0.15s;
+  width: 100px;
+  height: 50px;
+  border: 2px solid #F98E2C;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+.main .filters span.sort:hover {
+  background-color: #fdc692;
+}
 .main .sec__catalog {
   margin: 211px 0 119px;
   display: flex;
@@ -333,7 +482,7 @@ footer .footer-wrapper ul {
     height: 62px;
     font-size: 20px;
   }
-  header .header-wrapper__banner {
+  .header-wrapper__banner {
     height: 568px;
   }
   .main {
@@ -501,7 +650,7 @@ footer .footer-wrapper ul {
     height: 52px;
     font-size: 15px;
   }
-  header .header-wrapper__banner {
+  .header-wrapper__banner {
     height: 404px;
   }
   .main {
@@ -666,7 +815,7 @@ footer .footer-wrapper ul {
     height: 52px;
     font-size: 11px;
   }
-  header .header-wrapper__banner {
+  .header-wrapper__banner {
     height: 301px;
   }
   .main {
@@ -835,7 +984,7 @@ footer .footer-wrapper ul {
     height: 21px;
     font-size: 8px;
   }
-  header .header-wrapper__banner {
-    height: 301px;
-  }
+}
+.header-wrapper__banner {
+  height: 301px;
 }/*# sourceMappingURL=style.css.map */
